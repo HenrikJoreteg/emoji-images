@@ -25,7 +25,7 @@ async.each(urls, function (url, loopCb) {
             text = text.match(/url\((\S+)\)/)[0];
             results[name] = text.slice(4, -1);
         });
-        fs.writeFileSync('output/' + url.slice(65, -5) + '.json', JSON.stringify(results, null, 2));
+        fs.writeFileSync('json/' + url.slice(65, -5) + '.json', JSON.stringify(results, null, 2));
         loopCb();
     });
 });
