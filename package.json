@@ -1,0 +1,7 @@
+{
+    "name": "emoji-json",
+    "dependencie": {
+        "async": "",
+        "request": ""
+    }
+}
