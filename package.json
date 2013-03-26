@@ -1,6 +1,7 @@
 {
-    "name": "emoji-json",
-    "dependencie": {
+    "name": "emoji",
+    "description": "Replace stuff like :smiley: in text with <img> tags of a corresponding image.",
+    "dev-dependencies": {
         "async": "",
         "request": ""
     }

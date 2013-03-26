@@ -1,22 +1,22 @@
-var args = process.argv.slice(2),
-    fs = require('fs');
+var fs = require('fs'),
+    template = fs.readFileSync(__dirname + '/template.js').toString(),
+    types = [
+        'emoticons',
+        'nature',
+        'objects',
+        'people',
+        'places',
+        'symbols'
+    ],
+    all = [];
 
-if (args.length === 0) {
-    args = ['emoticons', 'people'];
-}
-
-var results = {},
-    template = fs.readFileSync(__dirname + '/template.js').toString();
-
-args.forEach(function (item) {
-    var data = JSON.parse(fs.readFileSync(__dirname + '/json/' + item + '.json').toString());
-    for (var key in data) {
-        results[key] = data[key];
-    }
+types.forEach(function (type) {
+    var object = JSON.parse(fs.readFileSync('json/' + type + '.json').toString());
+    all = all.concat(Object.keys(object));
 });
 
-var string = JSON.stringify(results, null, 4);
+all.forEach(function (item, index) {
+    all[index] = ':' + all[index] + ':';
+});
 
-string = string.replace(/"(\S+)":/, "$&");
-
-fs.writeFileSync('inline-emoji.js', template.replace("{{data}}", string), 'utf-8');
+fs.writeFileSync('emoji.js', template.replace("{{data}}", JSON.stringify(all)), 'utf-8');

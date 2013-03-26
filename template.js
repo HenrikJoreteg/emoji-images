@@ -1,21 +1,19 @@
-(function () {
-var emojis = {{data}};
+var emojis = {{data}},
+    test = /\:[a-z_]+\:/g;
 
-    function template(name, image) {
-        return ['<img class="emoji" alt="', name, '" src="data:image/png;base64,', image, '/>'].join('');
-    }
+function template(name) {
+    var name = name.slice(1, -1);
+    return ['<img class="emoji" alt="', name, '" src="https://andbang-emoji.s3.amazonaws.com/', name, '.png"/>'].join('');
+}
 
-    function emoji(text, options) {
-        var i = 0,
-            l = emoticons.length,
-            item,
-            width = options.size || 30;
-        for (; i < l; i++) {
-            item = emoticons[i];
-            text = text.replace(item[0], template(item[1], item[2]));
+function emoji(someString) {
+    return someString.replace(test, function (match) {
+        if (all.indexOf(match) !== -1) {
+            return template(match);
+        } else {
+            return match;
         }
-        return text;
-    };
+    });
+};
 
-    module.exports = emoji;
-}());
+module.exports = emoji;
