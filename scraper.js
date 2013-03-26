@@ -19,7 +19,7 @@ async.each(urls, function (url, loopCb) {
         var split = body.split('\n');
         split.forEach(function (text) {
             if (!text) return;
-            var text = text.slice(9),
+            var text = String(text).slice(9),
                 name = text.match(/^\S+/)[0];
 
             text = text.match(/url\((\S+)\)/)[0];

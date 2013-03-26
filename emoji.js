@@ -8,7 +8,7 @@ function template(name) {
 
 function emoji(someString) {
     return someString.replace(test, function (match) {
-        if (all.indexOf(match) !== -1) {
+        if (emojis.indexOf(match) !== -1) {
             return template(match);
         } else {
             return match;
