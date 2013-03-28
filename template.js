@@ -3,7 +3,7 @@ var emojis = {{data}},
 
 function template(name) {
     var name = String(name).slice(1, -1);
-    return ['<img class="emoji" alt="', name, '" src="https://andbang-emoji.s3.amazonaws.com/', name, '.png"/>'].join('');
+    return ['<img class="emoji" title=":', name, ':" alt="', name, '" src="https://andbang-emoji.s3.amazonaws.com/', encodeURIComponent(name), '.png"/>'].join('');
 }
 
 function emoji(someString) {
