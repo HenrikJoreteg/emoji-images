@@ -1,5 +1,5 @@
 var emojis = {{data}},
-    test = /\:[a-z0-9_\-]+\:/g;
+    test = /\:[a-z0-9_\-\+]+\:/g;
 
 function template(name) {
     var name = String(name).slice(1, -1);
