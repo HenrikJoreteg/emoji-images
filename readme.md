@@ -26,6 +26,13 @@ var emojified = emoji(string, 'http://url.com/where-you-put-the-pngs-folder/', 3
 
 It's bundled to work as a CommonJS module, AMD module or expose itself as a global as a fallback.
 
+## install
+
+Grab it here or on npm:
+
+```
+npm install emoji-images
+```
 
 ## Why not just use https://github.com/hassankhan/emojify.js?
 
