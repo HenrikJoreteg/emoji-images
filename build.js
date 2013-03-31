@@ -19,4 +19,4 @@ all.forEach(function (item, index) {
     all[index] = ':' + all[index] + ':';
 });
 
-fs.writeFileSync('emoji.js', template.replace("{{data}}", JSON.stringify(all)), 'utf-8');
+fs.writeFileSync('emoji-images.js', template.replace("{{data}}", JSON.stringify(all)), 'utf-8');
