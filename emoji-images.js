@@ -27,5 +27,7 @@
         });
     };
 
+    emoji.list = emojis;
+
     return emoji;
 }));
