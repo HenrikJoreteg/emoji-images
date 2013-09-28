@@ -1,6 +1,6 @@
 {
     "name": "emoji-images",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Henrik Joreteg <henrik@andyet.net>",
     "description": "Replace stuff like :smiley: in text with <img> tags of a corresponding image.",
     "repository": {
