@@ -1,5 +1,10 @@
 #emoji-images.js
 
+
+---
+**Warnging:** this repo not actively maintained, if you'd like to take over maintenance of it, let me know on this issue: https://github.com/HenrikJoreteg/emoji-images/issues/11 You may also want to check out this alternative: https://github.com/frissdiegurke/emoji-parser 
+---
+
 Because sometimes you want to send a :heart: to someone.
 
 
